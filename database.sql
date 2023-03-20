@@ -16,3 +16,5 @@ PRIMARY KEY (id)
 
 desc user;
 
+INNER JOIN
+

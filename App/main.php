@@ -10,13 +10,11 @@ $controller->var = new View_test();
 
 $controller->show_test = new View_test();
 
-$obj = new Person("tom", "jobin","M","1994-04-05","01234567890","teste@teste.com", "password");
+$controller->Query_select();
 
 #declares the objects:
 
 $controller->show_test->test();
 
-echo"<pre>";
-print_r ($obj);
 
 ?>
