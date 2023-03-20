@@ -4,8 +4,6 @@
 
 class controller{
     
-
-    
     public function show_test(string $var = null)
     {
         
