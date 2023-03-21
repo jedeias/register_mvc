@@ -65,32 +65,32 @@ class Controller{
 
     }
 
-    public function Query_select_login(string $email, string $password)
-    {
+    // public function Query_select_login(string $email, string $password)
+    // {
 
-        $this->email = $email;
-        $this->password = $password;
+    //     $this->email = $email;
+    //     $this->password = $password;
 
-        try {
+    //     try {
     
-            $conect = new Conect();
-             // do something with $conect
+    //         $conect = new Conect();
+    //          // do something with $conect
             
-            $selec_mysql = new Crud();
+    //         $selec_mysql = new Crud();
 
-            $user_list = $selec_mysql->select_by_email($this->email, $conect);
+    //         $user_list = $selec_mysql->select_by_email($this->email, $conect);
 
-            var_dump($user_list);
+    //         var_dump($user_list);
 
-        } catch(PDOException $err) {
+    //     } catch(PDOException $err) {
         
-            echo "Database connection error <br>" . $err -> getMessage();
+    //         echo "Database connection error <br>" . $err -> getMessage();
         
-        }
+    //     }
         
-        return $user_list;
+    //     return $user_list;
 
-    }
+    // }
 
     public function login_check(string $email, string $password)
     {
