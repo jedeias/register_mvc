@@ -3,6 +3,19 @@
 class Crud
 {
     
+    public function select_all()
+    {
+
+        $MyQuerySelect = $conect->pdo->prepare("SELECT * FROM user");    
+
+        $MyQuerySelect->execute();
+
+        $result = $MyQuerySelect -> fetchALL(PDO::FETCH_ASSOC);
+
+        return $result;
+
+    }
+    
     public function select(object $person,object $conect)
     {
 
@@ -10,23 +23,15 @@ class Crud
 
         $this->person = $person;
 
-        $MyQuerySelect = $conect->pdo->prepare("SELECT * FROM user");    
-
-        echo"<br><br> <pre>";
-
-        var_dump($MyQuerySelect);
+        $email = $this->preson->email;
+        
+        $MyQuerySelect = $conect->pdo->prepare("SELECT * FROM user WHERE email='$email' ");    
 
         $MyQuerySelect->execute();
 
         $result = $MyQuerySelect -> fetchALL(PDO::FETCH_ASSOC);
 
-        var_dump($result);
-
-        foreach ($MyQuerySelect as $key => $value) {
-            # code...
-        }
-
-        var_dump($MyQuerySelect);
+        return $result;
 
     }
 

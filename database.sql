@@ -15,5 +15,5 @@ password VARCHAR(12) NOT NULL
 
 desc user;
 
-INSERT into user VALUES (DEFAULT, "demo", "demo_nick", "M", "19940403", "demo@demo.com", "123456789");
-
+INSERT INTO user VALUES (DEFAULT, "demo", "demo_nick", "M", "1994-04-03", "demo@demo.com", "123456789");
+INSERT INTO user VALUES (DEFAULT, "user", " user_name", "F", "19940403", "demo@demo.com", "123456789");

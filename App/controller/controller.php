@@ -2,10 +2,22 @@
 
 class Controller{
     
-    public function show_test(string $var = null){
+    public function show_display(string $mansage){
         
-        echo $var->test();
+        $this->mansage = $mansage;
 
+        $display = new Display();
+        
+        $display_test = $display->test($this->mansage);
+        
+    }
+
+    public function show_user_list()
+    {
+        
+        $display = new Display();
+
+        $display->table_select();
     }
 
     public function People(    string $name,
@@ -30,7 +42,28 @@ class Controller{
 
     }
 
-    public function Query_select(object $person)
+    public function Query_select_all()
+    {
+        try {
+    
+            $conect = new Conect();
+            // do something with $conect
+            
+            $selec_mysql = new Crud();
+
+            $selec_mysql->select_all();
+
+        } catch(PDOException $err) {
+        
+            echo "Database connection error <br>" . $err -> getMessage();
+        
+        }
+        
+        return $user_list;
+
+    }
+
+    public function Query_select_person(object $person)
     {
 
         $this->person = $person;
@@ -42,7 +75,7 @@ class Controller{
             
             $selec_mysql = new Crud();
 
-            $selec_mysql->select($person, $conect);
+            $user_list = $selec_mysql->select($person, $conect);
 
         } catch(PDOException $err) {
         
@@ -50,9 +83,10 @@ class Controller{
         
         }
         
-        
+        return $user_list;
 
     }
+
 
 }
 
