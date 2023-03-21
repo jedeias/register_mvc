@@ -25,7 +25,7 @@ if (isset($email) or isset($password) ){
         
         $user_array = $controller->Query_select_all();
         
-        $controller->show_display("test <br>");
+        //$controller->show_display("test <br>");
         
         $controller->show_all_user_list($user_array);
     }else{
