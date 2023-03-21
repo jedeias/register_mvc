@@ -1,6 +1,6 @@
 <?php
 
-#$MinhaQuery = "SELECT * FROM usuarios WHERE email=:mail"
+#$MyQuerySelect = "SELECT * FROM usuarios WHERE email=:email";
 
 # I decided to use PDO architecture because besides a more consistent syntax it is more secure.
 
@@ -20,7 +20,7 @@
    
 class Conect {
     
-    private $pdo;
+    public $pdo;
 
     public function __construct() {
         

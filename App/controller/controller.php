@@ -39,9 +39,10 @@ class Controller{
     
             $conect = new Conect();
             // do something with $conect
+            
+            $selec_mysql = new Crud();
 
-            $conect;
-
+            $selec_mysql->select($person, $conect);
 
         } catch(PDOException $err) {
         
@@ -49,7 +50,7 @@ class Controller{
         
         }
         
-
+        
 
     }
 
