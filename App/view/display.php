@@ -27,13 +27,26 @@ class Display{
                     <td> password </td>
                 </tr>
 
-            </table>
+            
         ";
 
-        foreach ($user_list as $user => $value) {
-            # code...
+        // loop through the PHP array
+        foreach ($user_list as $person) {
+          // create a table row tag
+          echo "\t<tr>\n";
+          
+          // loop through the sub-elements of the PHP array
+          foreach ($person as $key => $value) {
+            // create a table cell tag with the value inside
+            echo "\t\t<td>$value</td>\n";
+          }
+          
+          // end the table row tag
+          echo "\t</tr>\n";
         }
-
+        
+        // end the HTML table tag
+        echo "</table>\n";
 
     }
 

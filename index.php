@@ -17,7 +17,7 @@
             
                 <span class="input-group-text">user_name and password</span>
                 
-                <input type="email" aria-label="email" name="user_name" id="email" required placeholder="input email here">
+                <input type="email" aria-label="email" name="email" id="email" required placeholder="input email here">
                 <input type="password" aria-label="password" name="password" id="password" required placeholder="input password here">
             
             </div>
@@ -40,7 +40,7 @@
 
                 by this system being an academic activity the access password is public:<br>
                 email: demo@demo.com <br>
-                password: demo
+                password: 123456789
 
             </p>
 
