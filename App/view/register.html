@@ -11,33 +11,33 @@
 </head>
 <body>
     
-    <form>
+    <form action="../register.php" method="post" enctype="multipart/form-data">
         <div class="form-row">
           <div class="form-group col-md-6">
             <label for="inputEmail4">Email</label>
-            <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+            <input type="email" class="form-control" name="email" id="inputEmail4" placeholder="Email">
           </div>
           <div class="form-group col-md-6">
             <label for="inputPassword4">Password</label>
-            <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+            <input type="password" class="form-control" name="password" id="inputPassword4" placeholder="Password">
           </div>
         </div>
         <div class="form-group">
           <label for="name">User Name</label>
-          <input type="text" class="form-control" id="name" placeholder="Name here">
+          <input type="text" class="form-control" name="name" id="name" placeholder="Name here">
         </div>
         <div class="form-group">
           <label for="name2">Nick name</label>
-          <input type="text" class="form-control" id="name2" placeholder="Nick name">
+          <input type="text" class="form-control" name="name2" id="name2" placeholder="Nick name">
         </div>
         <div class="form-row">
           <div class="form-group col-md-6">
             <label for="cpf">CPF</label>
-            <input type="text" class="form-control" id="cpf">
+            <input type="text" class="form-control" name="cpf" id="cpf">
           </div>
           <div class="form-group col-md-4">
             <label for="sex">Sex</label>
-            <select id="sex" class="form-control">
+            <select id="sex" name="sex" class="form-control">
               <option selected>Choose...</option>
               <option value="M" >Male</option>
               <option value="F">Female</option>
@@ -45,7 +45,7 @@
           </div>
           <div class="form-group col-md-2">
             <label for="date_brith">Date brith</label>
-            <input type="date" class="form-control" id="date_brith">
+            <input type="date" class="form-control" name="date_brith" id="date_brith">
           </div>
         </div>
         

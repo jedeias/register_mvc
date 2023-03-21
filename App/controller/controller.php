@@ -36,7 +36,7 @@ class Controller{
     $this->date = $date;
     $this->cpf = $cpf;
     $this->email = $email;
-    $this->senha = $password;
+    $this->password = $password;
 
     $person = new People($name, $nick_name, $sex, $date, $cpf, $email, $password);
 
@@ -64,6 +64,22 @@ class Controller{
         }
 
     }
+    
+    public function insert_into(object $person)
+    {
+        $this->person = $person;
+
+        $conect = new Conect();
+        $inser = new Crud();
+        
+        echo "<pre>";
+        var_dump($this->person);
+        echo "<hr>";
+        
+        $inser->insert_user($this->person, $conect);
+
+    }
+
 
     // public function Query_select_login(string $email, string $password)
     // {

@@ -56,16 +56,22 @@ class Crud
 
     public function insert_user(object $person, object $conect)
     {
-        $MyQueryInsert = $conect->pdo->prepare("INSERT INTO user (name, nick_name, sex, date, email, password) VALUES (:name, :nick_name, :sex, :date, :email, :password)");
+        $MyQueryInsert = $conect->pdo->prepare("INSERT INTO user (id,name, nick_name, sex, date, email, cpf, password) VALUES (:default ,:name, :nick_name, :sex, :date, :email, :cpf, :password)");
     
-        $MyQueryInsert->bindParam(':name', $person->name);
-        $MyQueryInsert->bindParam(':nick_name', $person->nick_name);
-        $MyQueryInsert->bindParam(':sex', $person->sex);
-        $MyQueryInsert->bindParam(':date', $person->date);
-        $MyQueryInsert->bindParam(':email', $person->email);
-        $MyQueryInsert->bindParam(':password', $person->password);
-    
-        $MyQueryInsert->execute();
+        var_dump($person);
+
+        $MyQueryInsert->execute([
+            ':id' => default,
+            ':name' => $person->name,
+            ':nick_name' => $person->nick_name,
+            ':sex' => $person->sex,
+            ':date' => $person->date,
+            ':cpf'  => $person->cpf,
+            ':email' => $person->email,
+            ':password' => $person->password
+        ]);
+
+        //header("Refresh: 2 ; url=./main.php");
     }
 
 }

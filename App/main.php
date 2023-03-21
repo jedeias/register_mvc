@@ -36,7 +36,7 @@ if (isset($email) or isset($password) ){
 
     echo"email or password not fin";
     
-    //header("Refresh: 2 ; url=../index.php");    
+    header("Refresh: 2 ; url=../index.php");    
 
 }
 

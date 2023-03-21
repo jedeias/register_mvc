@@ -22,7 +22,7 @@
         $this->date = $date;
         $this->cpf = $cpf;
         $this->email = $email;
-        $this->senha = $password;
+        $this->password = $password;
     }
 }
 
