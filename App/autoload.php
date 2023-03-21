@@ -2,9 +2,12 @@
 
 #autoloading a method to find classes and integrate them into a file
 
-function autoload($class_Name){
+public function recept(Type $var = null)
+{
+    # code...
+}
 
-    
+function autoload($class_Name){
 
     #we look for the classes within the directories within this array
 
