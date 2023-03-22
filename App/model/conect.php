@@ -24,7 +24,7 @@ class Conect {
 
     public function __construct() {
         
-        $this->pdo = new PDO('mysql:host=sql206.epizy.com;dbname=epiz_33847192', "root", "YqaH1qkqZe9Mype");
+        $this->pdo = new PDO('mysql:host=sql206.epizy.com;dbname=epiz_33847192_XXX ', "epiz_33847192", "YqaH1qkqZe9Mype");
     
     }
 

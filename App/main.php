@@ -29,14 +29,14 @@ if (isset($email) or isset($password) ){
     }else{
         echo"Password or email invalid";
 
-        header("Refresh: 2 ; url=../index.php");
+        //header("Refresh: 2 ; url=../index.php");
     }
 
 }else{
 
     echo"email or password not fin";
     
-    header("Refresh: 2 ; url=../index.php");    
+    //header("Refresh: 2 ; url=../index.php");    
 
 }
 
