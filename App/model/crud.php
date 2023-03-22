@@ -54,24 +54,28 @@ class Crud
 
     }
 
-    public function insert_user(object $person, object $conect)
-    {
-        $MyQueryInsert = $conect->pdo->prepare("INSERT INTO user (id,name, nick_name, sex, date, email, cpf, password) VALUES (:default ,:name, :nick_name, :sex, :date, :email, :cpf, :password)");
-    
-        var_dump($person);
+    public function insert_user(object $person,object $conect) {
+        try {
+            //$stmt = $conect->prepare("INSERT INTO user (name, nick_name, sex, date_birth, email, CPF, password) VALUES (:name, :nick_name, :sex, :date_birth, :email, :CPF, :password)");
+        
+            $stmt = $conect->pdo->prepare("INSERT INTO user (name, nick_name, sex, date_birth, email, CPF, password) VALUES (:name, :nick_name, :sex, :date_birth, :email, :CPF, :password)");
 
-        $MyQueryInsert->execute([
-            ':id' => default,
-            ':name' => $person->name,
-            ':nick_name' => $person->nick_name,
-            ':sex' => $person->sex,
-            ':date' => $person->date,
-            ':cpf'  => $person->cpf,
-            ':email' => $person->email,
-            ':password' => $person->password
-        ]);
+            print_r($person);
 
-        //header("Refresh: 2 ; url=./main.php");
+            $stmt->bindParam(':name', $person->name);
+            $stmt->bindParam(':nick_name', $person->nick_name);
+            $stmt->bindParam(':sex', $person->sex);
+            $stmt->bindParam(':date_birth', $person->date);
+            $stmt->bindParam(':email', $person->email);
+            $stmt->bindParam(':CPF', $person->cpf);
+            $stmt->bindParam(':password', $person->password);
+            
+            $stmt->execute();
+            
+            echo "Usuário inserido com sucesso!";
+        } catch(PDOException $e) {
+            echo "Erro ao inserir usuário: " . $e->getMessage();
+        }
     }
 
 }

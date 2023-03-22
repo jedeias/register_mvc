@@ -21,4 +21,8 @@ desc user;
 INSERT INTO user VALUES (DEFAULT, "demo", "demo_nick", "M", "1994-04-03", "demo@demo.com", "01234567890","123456789");
 INSERT INTO user VALUES (DEFAULT, "user", " user_name", "F", "19940403", "teste@teste.com", "01234567891", "password");
 
+INSERT INTO user (name, nick_name, sex, date_birth, email, CPF, password) 
+VALUES ('tst', 'tst', 'M', '1994-01-03', 'tst@tst.com', '5646887', 'tst');
+
+
 -- DROP DATABASE register_mvc;
