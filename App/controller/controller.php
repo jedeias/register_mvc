@@ -72,10 +72,6 @@ class Controller{
         $conect = new Conect();
         $inser = new Crud();
         
-        echo "<pre>";
-        var_dump($this->person);
-        echo "<hr>";
-        
         $inser->insert_user($this->person, $conect);
 
     }
@@ -134,7 +130,7 @@ class Controller{
                 
                 echo"Password or email invalid";
 
-                header("Refresh: 1 ; url=../index.php");
+                header("Refresh: 1 ; url=../index.html");
 
             }
 

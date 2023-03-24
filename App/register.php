@@ -13,10 +13,6 @@ $password = $_POST['password'];
 
 $preson = $controller->People($name, $nick_name, $sex , $date, $cpf, $email, $password);
 
-echo"<pre>";
-var_dump($preson);
-echo"<hr>";
-
 $controller->insert_into($preson);
 
 ?>

@@ -50,7 +50,7 @@ class Crud
         
         echo"this id: $id was deleted";
     
-        header("Refresh: 2 ; url=../index.php");
+        header("Refresh: 2 ; url=../index.html");
 
     }
 
@@ -59,8 +59,6 @@ class Crud
             //$stmt = $conect->prepare("INSERT INTO user (name, nick_name, sex, date_birth, email, CPF, password) VALUES (:name, :nick_name, :sex, :date_birth, :email, :CPF, :password)");
         
             $stmt = $conect->pdo->prepare("INSERT INTO user (name, nick_name, sex, date_birth, email, CPF, password) VALUES (:name, :nick_name, :sex, :date_birth, :email, :CPF, :password)");
-
-            print_r($person);
 
             $stmt->bindParam(':name', $person->name);
             $stmt->bindParam(':nick_name', $person->nick_name);
@@ -73,8 +71,10 @@ class Crud
             $stmt->execute();
             
             echo "Usuário inserido com sucesso!";
+            header("Refresh: 2 ; url=main.php");
         } catch(PDOException $e) {
             echo "Erro ao inserir usuário: " . $e->getMessage();
+            header("Refresh: 2 ; url=main.php");
         }
     }
 

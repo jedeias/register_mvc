@@ -18,9 +18,6 @@ if (isset($email) or isset($password) ){
     
     if($login_view==TRUE){
         
-
-        $person = $controller->People("nome","sobrenome","M","1935-05-06", "01234567890" ,"teste@teste","123456");
-        
         $user_array = $controller->Query_select_all();
         
         //$controller->show_display("test <br>");
@@ -29,14 +26,14 @@ if (isset($email) or isset($password) ){
     }else{
         echo"Password or email invalid";
 
-        //header("Refresh: 2 ; url=../index.php");
+        header("Refresh: 2 ; url=../index.html");
     }
 
 }else{
 
     echo"email or password not fin";
     
-    //header("Refresh: 2 ; url=../index.php");    
+    header("Refresh: 2 ; url=../index.html");    
 
 }
 

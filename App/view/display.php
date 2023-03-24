@@ -54,6 +54,7 @@ class Display{
         echo "</table>\n";
 
         echo "<br><a href='view/register.html'><button>register</button></a><br>";
+        
     }
 
 
