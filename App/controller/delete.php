@@ -1,6 +1,9 @@
 <?php
 
-include"autoload.php";
+include"../autoload.php";
+
+require_once"../model/conect.php";
+require_once"../model/crud.php";
 
 $id = $_GET['id']; 
 

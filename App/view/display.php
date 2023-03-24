@@ -45,7 +45,7 @@ class Display{
         
         $id = ($person['id']);
 
-          echo"<td> <a href='delete.php?id=$id'> DELETE </a></td>";
+          echo"<td> <a href='controller/delete.php?id=$id'> DELETE </a></td>";
           // end the table row tag
           echo "\t</tr>\n";
         }

@@ -1,5 +1,9 @@
 <?php
-include"autoload.php";
+include"../autoload.php";
+
+require_once"../model/conect.php";
+require_once"../model/crud.php";
+require_once"../model/people.php";
 
 $controller = new Controller();
 

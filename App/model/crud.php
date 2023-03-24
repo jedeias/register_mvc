@@ -50,7 +50,7 @@ class Crud
         
         echo"this id: $id was deleted";
     
-        header("Refresh: 2 ; url=../index.html");
+        header("Refresh: 2 ; url=../../index.html");
 
     }
 
@@ -71,10 +71,10 @@ class Crud
             $stmt->execute();
             
             echo "Usuário inserido com sucesso!";
-            header("Refresh: 2 ; url=main.php");
+            header("Refresh: 2 ; url= ../main.php");
         } catch(PDOException $e) {
             echo "Erro ao inserir usuário: " . $e->getMessage();
-            header("Refresh: 2 ; url=main.php");
+            header("Refresh: 2 ; url= ../main.php");
         }
     }
 
