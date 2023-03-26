@@ -8,7 +8,7 @@ $email = $_POST["email"];
 $password = $_POST["password"];
 
 
-if (isset($email) or isset($password) ){
+if (isset($email) and isset($password) ){
 
     $controller = new Controller();
     
@@ -23,6 +23,7 @@ if (isset($email) or isset($password) ){
         //$controller->show_display("test <br>");
         
         $controller->show_all_user_list($user_array);
+        
     }else{
         echo"Password or email invalid";
 

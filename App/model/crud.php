@@ -56,6 +56,7 @@ class Crud
 
     public function insert_user(object $person,object $conect) {
         try {
+            
             //$stmt = $conect->prepare("INSERT INTO user (name, nick_name, sex, date_birth, email, CPF, password) VALUES (:name, :nick_name, :sex, :date_birth, :email, :CPF, :password)");
         
             $stmt = $conect->pdo->prepare("INSERT INTO user (name, nick_name, sex, date_birth, email, CPF, password) VALUES (:name, :nick_name, :sex, :date_birth, :email, :CPF, :password)");
