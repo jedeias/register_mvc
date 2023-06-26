@@ -1,2 +1,45 @@
+# Register MVC
 
-This project is an activity of the System Development course at Etec Jardim Ângela, a public technical school in São Paulo, Brazil
+This project, "register_mvc", was developed for the purpose of practical study on the basics of Object-Oriented Programming (OOP), Model-View-Controller (MVC), Session management, PDO (PHP Data Objects), and arrays. The project utilizes PHP 7.4.19 and MySQL 5.7.33.
+
+## Technologies Used
+
+- PHP 7.4.19
+- MySQL 5.7.33
+
+## Features
+
+- User Registration: Allows users to create new accounts.
+- User Login: Provides authentication for registered users.
+- User Profile: Allows users to view and update their profile information.
+
+## Concepts Explored
+
+- Object-Oriented Programming (OOP): The project demonstrates the basics of OOP, including the use of classes, objects, and inheritance to structure the code.
+- Model-View-Controller (MVC): The code is organized following the MVC architectural pattern, separating concerns between the Model, View, and Controller components.
+- Session Management: Sessions are used to manage user authentication and track user state across multiple requests.
+- PDO (PHP Data Objects): PDO is used for database connectivity and executing queries securely.
+- Arrays: Arrays are utilized for data manipulation and storage.
+
+## Quick Clone
+
+To quickly clone this project, you can use the following command:
+
+```bash
+git clone https://github.com/jedeias/register_mvc.git
+```
+
+## Getting Started
+
+To get started with this project, follow these steps:
+
+1. Clone the repository to your local environment.
+2. Set up a web server (such as Apache) and a MySQL database.
+3. Import the necessary database schema or run the database migration scripts.
+4. Configure the database connection information in the project's configuration file.
+5. Run the project on your web server.
+6. Access the project in your web browser and start using the registration and login features.
+
+## Contribution
+
+Contributions to this project are welcome. If you have suggestions or improvements, feel free to open an issue or submit a pull request.
